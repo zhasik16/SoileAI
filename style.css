@@ -6,6 +6,9 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -491,5 +494,46 @@ footer {
     }
     .chatbot .header i {
         display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 2em;
+    }
+    .hero-content h1 strong {
+        font-size: 2em;
+    }
+    .cta-button {
+        padding: 0.75em 1.5em;
+    }
+    .nav-links {
+        display: none;
+    }
+    .instruction-section {
+        flex-direction: column;
+    }
+    .instruction-content {
+        max-width: 100%;
+        margin: 0;
+    }
+    .container {
+        max-width: 100%;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .telega .header {
+        flex-direction: column;
+    }
+    .telega .content {
+        flex-direction: column;
+    }
+    .chatbot {
+        width: 90%;
+    }
+    .social-icons {
+        flex-direction: column;
     }
 }
