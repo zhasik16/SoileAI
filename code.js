@@ -74,3 +74,18 @@ chatInput.addEventListener("keydown", (e) => {
 sendChatBtn.addEventListener("click", handleChat);
 chatbotCloseBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+
+document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default jump to section
+            const targetId = this.getAttribute('href').substring(1); // Get the section ID
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll
+        });
+    });
+
+const navLinks = document.querySelector('.nav-links');
+document.querySelector('.logo').addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
